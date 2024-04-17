@@ -411,7 +411,7 @@ class Bill_App:
 
     def Bprint(self):
         q = self.textarea.get(1.0,"end-1c")
-        filename = tempfile.mkdtemp('.txt')
+        filename = tempfile.mktemp('.txt')
         open(filename,'w').write(q)
         os.startfile(filename,"print")
 
